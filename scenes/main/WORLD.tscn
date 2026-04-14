@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cjwrf4x13fpvx"]
 
 [ext_resource type="PackedScene" uid="uid://ealxqjj1p7un" path="res://scenes/player/Player.tscn" id="1_u2d57"]
+[ext_resource type="Texture2D" uid="uid://28jlc3t5edh8" path="res://assets/sprites/ground/ground.png" id="2_dec6f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t2b0y"]
 size = Vector2(1148, 60)
@@ -17,12 +18,14 @@ shape = SubResource("RectangleShape2D_t2b0y")
 position = Vector2(1721, 616)
 shape = SubResource("RectangleShape2D_t2b0y")
 
-[node name="Player" parent="StaticBody2D" unique_id=17460704 instance=ExtResource("1_u2d57")]
-position = Vector2(558, 416)
-scale = Vector2(0.5, 0.5)
-
-[node name="Camera2D" type="Camera2D" parent="StaticBody2D/Player" unique_id=507778477]
-position = Vector2(10, 50)
-
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1954845022]
 position = Vector2(390, 236)
+
+[node name="Player" parent="." unique_id=17460704 instance=ExtResource("1_u2d57")]
+position = Vector2(136, 516)
+scale = Vector2(0.25, 0.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=81302188]
+position = Vector2(874, 616)
+scale = Vector2(54.375, 1.75)
+texture = ExtResource("2_dec6f")
